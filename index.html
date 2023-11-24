@@ -5,13 +5,14 @@
         <meta charset="UTF-8"/>
     <!--Meta son metadatos que sirven para el navegador, no se muestra en la página-->
         <title>Calculadora de Hidratación</title>
-        <link rel="stylesheet" href="./style.css" />
+        <link rel="stylesheet" href="style.css" /> 
+        <script src="script.js"> </script>
     </head>
 
     <body>
     <div id="contenedor">
             <div id="calculadora"> 
-                <div> 
+                <div class="calcula"> 
                     <h1>Hidratación Basal</h1>
                         <p>Completa los datos</p>
                         <input type="number" placeholder="Peso en kg"/>
@@ -22,7 +23,7 @@
                 </div>
             </div>
             <div id="detalle">
-                <div>
+                <div class="contenido">
                     <h1>¿CÓMO SE CALCULA?</h1>
                         <ul>
                             <li>De 0kg a 10kg, se calcula 100cc por cada kilo.</li>
