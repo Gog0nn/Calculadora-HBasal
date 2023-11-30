@@ -3,13 +3,17 @@ let pesoPac = document.getElementById("peso");
 let boton = document.getElementById("calcularr");
 let Vol =  document.getElementById("volumen");
 let mant = document.getElementById("mantenimiento");
-
-boton.addEventListener("click", botoncalcular)
+let errorr = document.getElementById("menError"); 
+boton.addEventListener("click", botoncalcular);
 
 function botoncalcular() {
     let peso = pesoPac.valueAsNumber
     let resultado; 
-    if (peso >= 30) {
+    if (peso == 0) {
+        errorr.style.display = 'block'
+        errorr.innerHTML = "debes ingresar un número mayor a 0"
+    } 
+    else if (peso >= 30) {
        resultado =  superficie(peso)
        Vol.style.display = "block"
        Vol.innerHTML = resultado * 1500  + " cc" 
@@ -34,7 +38,7 @@ function holliday (pesoin) {
         return sumafinalmayor20 
     }
 
-else if (pesoin > 10) { 
+    else if (pesoin > 10) { 
     let menor20 = pesoin - 10
     let multmenor20 = menor20 * 50
     let sumafinalmen20 = multmenor20 + 1000
@@ -42,7 +46,7 @@ else if (pesoin > 10) {
     return sumafinalmen20
     }
 
-else if (pesoin <= 10) {
+    else if (pesoin <= 10) {
     let menor10 = pesoin * 100
     console.log(menor10)
     return menor10

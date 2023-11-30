@@ -53,3 +53,11 @@ color: #FDFCFC;
 .resultado { 
     display: none;
 }
+#calcularr { 
+    background-color: #576BBA;
+    color: white;
+}
+
+.errorr { 
+    display: none; 
+}
