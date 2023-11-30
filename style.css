@@ -16,6 +16,7 @@ body {
     margin: auto;
     box-shadow: -10px 5px 15px -5px #888888;
     border-radius: 15px;
+    overflow: hidden;
 }
 
 #calculadora { 
@@ -23,7 +24,6 @@ body {
     width: 50%;
     height: 100%;
     float: left;
-    border-radius: 15px; 
 }
 
 #detalle {
@@ -32,7 +32,6 @@ width: 50%;
 height: 100%;
 float: right;
 color: #FDFCFC;
-border-radius: 15px
 }
 
 .contenido {
@@ -49,4 +48,8 @@ border-radius: 15px
     transform: translateY(-50%);
     overflow: hidden;
     padding: 40px;
+}
+
+.resultado { 
+    display: none;
 }
