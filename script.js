@@ -3,29 +3,41 @@ let pesoPac = document.getElementById("peso");
 let boton = document.getElementById("calcularr");
 let Vol =  document.getElementById("volumen");
 let mant = document.getElementById("mantenimiento");
+let mm2 = document.getElementById("mm2")
 let errorr = document.getElementById("menError"); 
 boton.addEventListener("click", botoncalcular);
+
 
 function botoncalcular() {
     let peso = pesoPac.valueAsNumber
     let resultado; 
+
     if (peso == 0) {
         errorr.style.display = 'block'
         errorr.innerHTML = "debes ingresar un número mayor a 0"
+        Vol.style.display = "none"
+        mant.style.display = "none"
+        mm2.style.display = "none"
     } 
     else if (peso >= 30) {
        resultado =  superficie(peso)
        Vol.style.display = "block"
-       Vol.innerHTML = resultado * 1500  + " cc" 
+       Vol.innerHTML = (resultado * 1500).toFixed(0)  + " cc (x1500)" 
        mant.style.display = "block"
-       mant.innerHTML = resultado * 2000 + " cc" 
+       mant.innerHTML = (resultado * 2000).toFixed(0) + " cc(x2000)" 
+       errorr.style.display = "none"
+       mm2.style.display = "none"
     }
     else {
         resultado = holliday(peso) 
         Vol.style.display = "block"
         Vol.innerHTML = resultado + " cc" 
         mant.style.display = "block"
-        mant.innerHTML = resultado / 24 + " cc/hr" 
+        mant.innerHTML = (resultado / 24).toFixed(0) + " cc/hr"
+        mm2.style.display = "block"
+        mm2.innerHTML = (resultado * 1.5) + " m+m/2" 
+        errorr.style.display = 'none'
+
     }
 }
 
