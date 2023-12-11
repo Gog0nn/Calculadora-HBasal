@@ -19,7 +19,7 @@ function botoncalcular() {
         mant.style.display = "none"
         mm2.style.display = "none"
     } 
-    else if (peso >= 30) {
+    else if (peso > 30) {
        resultado =  superficie(peso)
        Vol.style.display = "block"
        Vol.innerHTML = (resultado * 1500).toFixed(0)  + " cc (x1500)" 
